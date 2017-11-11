@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server to query twitter data and azure sentiment api",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "twitter",
+    "azure",
+    "sentiment",
+    "analysis"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "ISC"
+}
