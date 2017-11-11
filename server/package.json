@@ -13,5 +13,10 @@
     "analysis"
   ],
   "author": "Shashank Shekhar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "twit": "^2.2.9"
+  }
 }
