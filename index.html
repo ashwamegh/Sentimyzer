@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sentimyzer</title>
+
+  <link rel="apple-touch-icon" sizes="120x120" href="src/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16.png">
+  <link rel="manifest" href="src/images/manifest.json">
+  <link rel="mask-icon" href="src/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="src/images/favicon.ico">
+  <meta name="msapplication-config" content="src/images/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
 </head>
+
 <body>
+  <!-- Main App section -->
   <main class="row">
+    <!-- Column representing the Technologies Description and logos -->
     <div class="col s6 presentation">
-      <h1 class="app-title white-text">Sentimyzer</h1>
-      <p >
+      <h1 class="app-title white-text center-align">Sentimyzer</h1>
+      <p class="app-subtitle white-text center-align">Sentiment Analyzer</p>
+      <p class="center-align">
         <img src="src/images/azure.png" class="azure-logo" alt="Microsoft azure logo">
       </p>
+      <p class="center-align">
+        <img src="src/images/plus.png" class=" plus-logo" alt="Plus Symbol">
+      </p>
+      <p class="center-align">
+        <img src="src/images/twitter.png" class=" twitter-logo" alt="Twitter Logo">
+      </p>
     </div>
-    <div class="col s6 work"></div>
+    <!-- Column representing the description of the application  -->
+    <div class="col s6 work">
+      <h4 class="description center-align">Some Description</h4>
+      <form action="#" class="user-input row">
+        <label for="username" class="col s2 tweetat">@</label>
+        <input type="text" placeholder="twitter handle" class="col s10 handle-input" required>
+        <button type="submit" class="waves-effect waves-light btn-large handle-submit">Catch Your Sentiments
+          <i class="material-icons right">grain</i>
+        </button>
+      </form>
+    </div>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="src/script.js"></script>
 </body>
+
 </html>
