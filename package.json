@@ -1,0 +1,17 @@
+{
+  "name": "sentimyzer",
+  "version": "1.0.0",
+  "description": "A simple web app to anlayze your api using text analytics api and twitter api",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "azure",
+    "text",
+    "analytics",
+    "twitter"
+  ],
+  "author": "Shashank Shekhar, Kunal Mangalorekar",
+  "license": "ISC"
+}
