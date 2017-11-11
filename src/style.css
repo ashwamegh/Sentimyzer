@@ -7,7 +7,9 @@
 
 html{
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Amaranth', sans-serif; */
+  font-family: 'Cabin Sketch', cursive;
+  
 }
 body, .row{
   height: 100vh;
@@ -21,10 +23,28 @@ body, .row{
   height: 100%;
 }
 
+.app-title{
+  font-size: 400%;
+}
+
+.app-subtitle{
+  margin-bottom: 8rem;
+  font-size: 130%;
+}
+
 .azure-logo{
-  width: 60%;
+  width: 40%;
   text-align: center;
   margin: 0 auto;
+}
+
+.plus-logo{
+  width: 10%;
+}
+
+.twitter-logo{
+  width: 20%;
+  height: auto;
 }
 
 
@@ -32,4 +52,35 @@ body, .row{
 .work{
   background-color: #F8F8F8;
   height: 100%;
+  color: #55acee;
+  padding: 20px;
+}
+
+form.user-input{
+  margin-top: 30%;
+}
+
+label.tweetat{
+  font-size: 6rem;
+  color: #55acee;
+}
+
+input.handle-input{
+  margin-top: 60px !important;
+}
+
+input.handle-input:focus{
+  border-bottom: 1px solid #55acee !important;
+}
+
+button.handle-submit{
+  background-color: #fff;
+  color: #55acee;
+  border: 1px solid #55acee;
+}
+
+button.handle-submit:hover{
+  background-color: #55acee;
+  color: #fff;
+  border: 1px solid transparent;
 }
