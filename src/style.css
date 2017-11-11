@@ -1,0 +1,35 @@
+/* Universal Css styles */
+
+*{
+  box-shadow: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+body, .row{
+  height: 100vh;
+  width: auto;
+}
+
+/* Column - 1 - Presenting the Technologies used */
+
+.presentation{
+  background-color: #55acee;
+  height: 100%;
+}
+
+.azure-logo{
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/*  Column - 2 - The work */
+.work{
+  background-color: #F8F8F8;
+  height: 100%;
+}
