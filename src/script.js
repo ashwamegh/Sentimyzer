@@ -1,48 +1,29 @@
-(
-  window.onload = () => {
-  // fetch('https://api.twitter.com/1.1/statuses/user_timeline.json', {
-  //   body: {
-  //     
-  //   }
-  // })
-  // .then(
-  //   function(response) {
-  //     if (response.status !== 200) {
-  //       console.log('Looks like there was a problem. Status Code: ' +
-  //         response.status);
-  //       return;
-  //     }
+    const form = document.querySelector('form.user-input');
 
-  //     // Examine the text in the response
-  //     response.json().then(function(data) {
-  //       console.log(data);
-  //     });
-  //   }
-  // )
-  // .catch(function(err) {
-  //   console.log('Fetch Error :-S', err);
-  // });
+    const onFormSubmission = (event) => {
+      event.preventDefault();
+      const username = document.querySelector('input.handle-input').value;
+      console.log(username);
 
-  fetch('https://api.twitter.com/1.1/statuses/user_timeline.json', {
-    body: {
-    }
-  })
-  .then(
-    function(response) {
-      if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-          response.status);
-        return;
-      }
-
-      // Examine the text in the response
-      response.json().then(function(data) {
-        console.log(data);
+      fetch('https://sentimyzer-server.glitch.me/gettweets/'+username)
+      .then(
+        function(response) {
+          if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +
+              response.status);
+            return;
+          }
+    
+          // Examine the text in the response
+          response.json().then(function(data) {
+            console.log(data);
+          });
+        }
+      )
+      .catch(function(err) {
+        console.log('Fetch Error :-S', err);
       });
+
     }
-  )
-  .catch(function(err) {
-    console.log('Fetch Error :-S', err);
-  });
-}
-)();
+
+    form.addEventListener('submit', onFormSubmission);
