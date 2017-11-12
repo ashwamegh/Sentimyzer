@@ -2,10 +2,9 @@
 
     const onFormSubmission = (event) => {
       event.preventDefault();
-      const username = document.querySelector('input.handle-input').value;
-      console.log(username);
+      const username = document.querySelector('input.handle-input');
 
-      fetch('https://sentimyzer-server.glitch.me/gettweets/'+username)
+      fetch('https://sentimyzer-server.glitch.me/gettweets/'+username.value)
       .then(
         function(response) {
           if (response.status !== 200) {
@@ -24,6 +23,7 @@
         console.log('Fetch Error :-S', err);
       });
 
+      username.value = '';
     }
 
     form.addEventListener('submit', onFormSubmission);
