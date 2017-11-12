@@ -51,12 +51,12 @@ const get_sentiments = function (documents) {
 }
 
 
-app.get('/gettweets', (req, res) => {
+app.get('/gettweets/:username', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
 
-  const username = req.params;
-  console.log(username);
-  Twitter.get('statuses/user_timeline', { screen_name: 'shankywit', count: 10 }, function (err, data, response) {
+  const username = req.params.username;
+  
+  Twitter.get('statuses/user_timeline', { screen_name: username, count: 10 }, function (err, data, response) {
     let documents = [];
     data.map((userdata, index) => {
       documents.push({
