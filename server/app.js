@@ -50,6 +50,26 @@ const get_sentiments = function (documents) {
   })
 }
 
+app.all('/*', (req, res, next) => {
+  
+      const allowedReferers = ['https://shashank7200.github.io/Sentimyzer/'];
+  
+      if(allowedReferers.indexOf(req.headers.origin) !== -1){
+        res.header('Access-Control-Allow-Origin', req.headers.origin);
+      }else {
+        res.header('Access-Control-Allow-Origin', null);
+      }
+  
+      res.header('Access-Control-Allow-Credentials', true);
+      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+      res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type,token, Access-Control-Request-Method, Access-Control-Request-Headers');
+      if (req.method === 'OPTIONS') {
+        res.sendStatus(200);
+      } else {
+        next();
+      }
+});
+
 
 app.get('/gettweets/:username', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
